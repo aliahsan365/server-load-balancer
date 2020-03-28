@@ -1,0 +1,30 @@
+//////////////////////////////EJECUCION////////////////////////////////////////
+
+1.Se hace import del proyecto java 
+2.Se usa el JavaSE-1.8 como enviorment
+3.Se debe incluir la libreria externa .jar llamada DistriFile.jar
+4.Ahora se debe configurar la configuracion del arranque  de la siguente manera
+	4.1 : Como main elegimos el serverDemo.java que es un archivo que esta el src/representacion
+	4.2 : Ademas le añadimos como variable para arrancar -Xmx1024m , para tener un 1GB de heap.
+5.RUN
+NOTA : EN EL PROYECTO EN SI , YA ESTAN LAS DE AIMA.
+
+///////////////////////////////PARAMETRO EN EL CODIGO/////////////////////////
+
+EN serverDemo que nos hace de Main. Hay la variable booleana saORhc. Si saORhc = true entonces
+se ejecuta con Hill-Climbing , si saORhc = false se usa Simulated Anneling
+VARIABELEAS
+
+1."saORhc" , si true entonces Hill-Climbing , si false , entonces Simulated Anneling
+
+2."Heuristicas": si 1 se mejora el tiempo de tranmision del servidor que tarda mas. Si 2, entonces 
+mejora el segundo criterio.
+ Criterios generacion: 1 - fijo, 2 - iterativo, Otro - random
+
+3."criterioGeneracionEstadosIniciales";
+Criterios generacion: 1 - fijo, 2 - iterativo, Otro - random
+
+4.//ns, nrep, INITSEED, nu, nreq, INITSEED, ALGSEED, criteria
+new ServerData(50, 5, INITSEED, 200, 5, INITSEED, ALGSEED, criterioGeneracionEstadosIniciales)
+donde ns : numero de servidores ; donde nrep : numero de replicaciones , donde INITSEED : semilla1
+donde , nu : numero de usuarios , donde nreq : numero de requests , donde INITSEED , semilla 2.
